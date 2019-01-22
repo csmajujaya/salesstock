@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sales Maju Jaya</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://i.postimg.cc/0yHt87t0/logo-Maju-Black.png" type="image/x-icon">
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- external css -->
+    <style>
+        .jumbofull{
+            width: 100vw;
+        }
+
+        .btnfull{
+            width: 100% ;
+        }
+
+        .btn {
+            margin: 2px;
+        }
+
+        .btn-warning {
+            width: 105px
+        }
+
+        /* * {
+            border-style: solid;
+            border-color: blue;
+            border-width: 1px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- partners -->
+    <div id="partner" class="container center-block">
+        <div class="container btnfull">
+            <button id="uniken" type="button" class="btn btn-primary btn-lg">UNIKEN</button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">NIKKEN</button> </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">UNIKA</button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">NIEKEN</button>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div id="category" class="container category-uniken">
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg" id="RB">ROUTER BIT</button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">SAW BLADE</button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">DIAMOND WHEEL</button>
+        </div>
+    </div>
+
+    <!-- Series -->
+    <div id="serie" class="container SerieRB">
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">101</button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">103</button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">104</button>
+        </div>
+    </div>
+
+    <!-- Varian -->
+    <div id="varian" class="container varian101">
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg" id="101011">101-011</button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">101-021</button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg">101-031</button>
+        </div>
+    </div>
+    <!-- Item -->
+    <div class="jumbotron center-block jumbofull" id="item">
+        <div class="container row center-block">
+            <div class="col-xs-4 col-sm-5 col-md-5">
+                <img src="https://i.postimg.cc/8CfMCSv2/101-011.png" class="img-responsive">
+            </div>
+            <div class="col-xs-8 col-sm-7 col-md-7">
+                <h4>UNIKEN 101-011</h4>
+                <p style="font-size: 12pt">Straight bit, Single Flute, 1/4" Shank</p>
+                <p><a class="btn btn-success btn-sm">Avaliable (1000+)</a><a class="btn btn-info btn-sm">Price List :
+                        13.500</a></p>
+                <p><a class="btn btn-warning btn-sm">1 Pc : +5% <br>14.175</a><a class="btn btn-warning btn-sm">20 Pcs
+                        : Nett <br>13.500</a><a class="btn btn-warning btn-sm">100 Pcs : 5% <br>12.825</a><a class="btn btn-warning btn-sm">500
+                        Pcs : 10% <br>12.150</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- google jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- magic starts here -->
+    <script>
+        $('#category').hide()
+        $('#serie').hide()
+        $('#varian').hide()
+        $('#item').hide()
+        $('#uniken').click(function () {
+            $('#partner').slideUp();
+            $('#category').slideDown()
+        })
+        $('#RB').click(function () {
+            $('#category').slideUp();
+            $('#varian').slideDown()
+        })
+        $('#101011').click(function () {
+            $('#varian').slideUp();
+            $('#item').slideDown()
+        })
+
+    </script>
+</body>
+
+</html>
