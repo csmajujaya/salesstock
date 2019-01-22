@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,6 +56,11 @@
     <!-- Categories -->
     <div id="category" class="container category-uniken">
         <div class="container btnfull">
+            <button id="btn-back-category" type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> BACK
+            </button>
+        </div>
+        <div class="container btnfull">
             <button type="button" class="btn btn-primary btn-lg" id="RB">ROUTER BIT</button>
         </div>
         <div class="container btnfull">
@@ -70,7 +74,12 @@
     <!-- Series -->
     <div id="serie" class="container SerieRB">
         <div class="container btnfull">
-            <button type="button" class="btn btn-primary btn-lg">101</button>
+            <button id="btn-back-serie" type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> BACK
+            </button>
+        </div>
+        <div class="container btnfull">
+            <button type="button" class="btn btn-primary btn-lg" id="101">101</button>
         </div>
         <div class="container btnfull">
             <button type="button" class="btn btn-primary btn-lg">103</button>
@@ -82,6 +91,11 @@
 
     <!-- Varian -->
     <div id="varian" class="container varian101">
+        <div class="container btnfull">
+            <button id="btn-back-101" type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> BACK
+            </button>
+        </div>
         <div class="container btnfull">
             <button type="button" class="btn btn-primary btn-lg" id="101011">101-011</button>
         </div>
@@ -99,9 +113,14 @@
                 <img src="https://i.postimg.cc/8CfMCSv2/101-011.png" class="img-responsive">
             </div>
             <div class="col-xs-8 col-sm-7 col-md-7">
+                <div class="container btnfull">
+                    <button id="btn-back-101011" type="button" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> BACK
+                    </button>
+                </div>
                 <h4>UNIKEN 101-011</h4>
                 <p style="font-size: 12pt">Straight bit, Single Flute, 1/4" Shank</p>
-                <p><a class="btn btn-success btn-sm">Avaliable (1000+)</a><a class="btn btn-info btn-sm">Price List :
+                <p><a class="btn btn-success btn-sm">Ada Stok (150+)</a><a class="btn btn-info btn-sm">Price List :
                         13.500</a></p>
                 <p><a class="btn btn-warning btn-sm">1 Pc : +5% <br>14.175</a><a class="btn btn-warning btn-sm">20 Pcs
                         : Nett <br>13.500</a><a class="btn btn-warning btn-sm">100 Pcs : 5% <br>12.825</a><a class="btn btn-warning btn-sm">500
@@ -116,21 +135,41 @@
         crossorigin="anonymous"></script>
     <!-- magic starts here -->
     <script>
-        $('#category').hide()
-        $('#serie').hide()
-        $('#varian').hide()
-        $('#item').hide()
+        $('#category').hide();
+        $('#serie').hide();
+        $('#varian').hide();
+        $('#item').hide();
         $('#uniken').click(function () {
             $('#partner').slideUp();
-            $('#category').slideDown()
+            $('#category').slideDown();
+        })
+        $('#btn-back-category').click(function () {
+            $('#partner').slideDown();
+            $('#category').slideUp();
         })
         $('#RB').click(function () {
             $('#category').slideUp();
-            $('#varian').slideDown()
+            $('#serie').slideDown();
+        })
+        $('#btn-back-serie').click(function () {
+            $('#category').slideDown();
+            $('#serie').slideUp();
+        })
+        $('#101').click(function () {
+            $('#serie').slideUp();
+            $('#varian').slideDown();
+        })
+        $('#btn-back-101').click(function () {
+            $('#serie').slideDown();
+            $('#varian').slideUp();
         })
         $('#101011').click(function () {
             $('#varian').slideUp();
-            $('#item').slideDown()
+            $('#item').slideDown();
+        })
+        $('#btn-back-101011').click(function () {
+            $('#varian').slideDown();
+            $('#item').slideUp();
         })
 
     </script>
