@@ -103,15 +103,6 @@
                 <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> BACK
             </button>
         </div>
-        <div class="container btnfull">
-            <button type="button" class="btn btn-primary btn-lg" id="101011">101-011</button>
-        </div>
-        <div class="container btnfull">
-            <button type="button" class="btn btn-primary btn-lg">101-021</button>
-        </div>
-        <div class="container btnfull">
-            <button type="button" class="btn btn-primary btn-lg">101-031</button>
-        </div>
     </div>
     <!-- Item -->
     <div class="jumbotron center-block jumbofull" id="item">
@@ -171,7 +162,7 @@
             $('#serie').slideDown();
             $('#varian').slideUp();
         })
-        $('#UNIKEN 101011').click(function () {
+        $('#UNIKEN-101-011').click(function () {
             $('#varian').slideUp();
             $('#item').slideDown();
         })
@@ -209,7 +200,7 @@
                     $("#varian").append(
                         `
                         <div class="container btnfull">
-                            <button type="button" class="btn btn-primary btn-lg" id="${routerbit[0]}">${routerbit[0]}</button>
+                            <button type="button" class="btn btn-primary btn-lg" id="${routerbit[0]}">${routerbit[1]}</button>
                         </div>
                         `
                     )
