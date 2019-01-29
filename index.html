@@ -203,6 +203,10 @@
             request.then(function (response) {
                 // TODO: Change code below to process the `response` object:
                 datadata = (response.result.values);
+                // script olah data
+                datadata.forEach(function (routerbit) {
+                    console.log(routerbit[0])
+                });
             }, function (reason) {
                 console.error('error: ' + reason.result.error.message);
             });
@@ -249,14 +253,10 @@
         function handleSignOutClick(event) {
             gapi.auth2.getAuthInstance().signOut();
         }
-        // script olah data
-        datadata.forEach(function (routerbit) {
-            console.log(routerbit[0])
-        });
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
+        </script>
 </body>
 
 </html>
