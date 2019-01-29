@@ -202,7 +202,7 @@
             var request = gapi.client.sheets.spreadsheets.values.get(params);
             request.then(function (response) {
                 // TODO: Change code below to process the `response` object:
-                datadata = (response.result);
+                datadata = (response.result.values);
             }, function (reason) {
                 console.error('error: ' + reason.result.error.message);
             });
@@ -249,7 +249,11 @@
         function handleSignOutClick(event) {
             gapi.auth2.getAuthInstance().signOut();
         }
-
+        // script olah data
+        datadata.forEach(datafunction);
+        function datafunction(item, index){
+            console.log(index, item)
+        }
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
