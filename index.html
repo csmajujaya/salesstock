@@ -106,24 +106,7 @@
     </div>
     <!-- Item -->
     <div class="jumbotron center-block jumbofull" id="item">
-        <div class="container row center-block">
-            <div class="col-xs-4 col-sm-5 col-md-5">
-                <img src="https://i.postimg.cc/8CfMCSv2/101-011.png" class="img-responsive">
-            </div>
-            <div class="col-xs-8 col-sm-7 col-md-7">
-                <div class="container btnfull">
-                    <button id="btn-back-101011" type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> BACK
-                    </button>
-                </div>
-                <h4>UNIKEN 101-011</h4>
-                <p style="font-size: 12pt">Straight bit, Single Flute, 1/4" Shank</p>
-                <p><a class="btn btn-success btn-sm">Ada Stok (150+)</a><a class="btn btn-info btn-sm">Price List :
-                        13.500</a></p>
-                <p><a class="btn btn-warning btn-sm">1 Pc : +5% <br>14.175</a><a class="btn btn-warning btn-sm">20 Pcs
-                        : Nett <br>13.500</a><a class="btn btn-warning btn-sm">100 Pcs : 5% <br>12.825</a><a class="btn btn-warning btn-sm">500
-                        Pcs : 10% <br>12.150</a></p>
-            </div>
+        
         </div>
     </div>
     <!-- google jquery -->
@@ -196,11 +179,31 @@
                 datadata = (response.result.values);
                 // script olah data
                 datadata.forEach(function (routerbit) {
-                    console.log(routerbit[0])
                     $("#varian").append(
                         `
                         <div class="container btnfull">
                             <button type="button" class="btn btn-primary btn-lg" id="${routerbit[0]}">${routerbit[1]}</button>
+                        </div>
+                        `
+                    )
+                    $("#item").append(
+                        `
+                        <div class="container row center-block" id"item${routerbit[0]}">
+                            <div class="col-xs-4 col-sm-5 col-md-5">
+                                <img src="${routerbit[2]}" class="img-responsive">
+                            </div>
+                            <div class="col-xs-8 col-sm-7 col-md-7">
+                                <div class="container btnfull">
+                                    <button id="btn-back-101011" type="button" class="btn btn-default btn-lg">
+                                        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> BACK
+                                    </button>
+                                </div>
+                            <h4>${routerbit[1]}</h4>
+                            <p><a class="btn btn-success btn-sm">Ada Stok (150+)</a><a class="btn btn-info btn-sm">Price List :
+                                ${routerbit[3]}</a></p>
+                            <p><a class="btn btn-warning btn-sm">1 Pc : +5% <br>${routerbit[3]}</a><a class="btn btn-warning btn-sm">20 Pcs
+                            : Nett <br>${routerbit[3]}</a><a class="btn btn-warning btn-sm">100 Pcs : 5% <br>${routerbit[3]}</a><a class="btn btn-warning btn-sm">500
+                            Pcs : 10% <br>${routerbit[3]}</a></p>
                         </div>
                         `
                     )
