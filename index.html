@@ -171,7 +171,7 @@
             $('#serie').slideDown();
             $('#varian').slideUp();
         })
-        $('#101011').click(function () {
+        $('#UNIKEN 101011').click(function () {
             $('#varian').slideUp();
             $('#item').slideDown();
         })
@@ -206,6 +206,14 @@
                 // script olah data
                 datadata.forEach(function (routerbit) {
                     console.log(routerbit[0])
+                    $("#varian").append(
+                        `
+                        <div class="container btnfull">
+                            <button type="button" class="btn btn-primary btn-lg" id="${routerbit[0]}">${routerbit[0]}</button>
+                        </div>
+                        `
+                    )
+
                 });
             }, function (reason) {
                 console.error('error: ' + reason.result.error.message);
