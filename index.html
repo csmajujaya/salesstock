@@ -250,10 +250,9 @@
             gapi.auth2.getAuthInstance().signOut();
         }
         // script olah data
-        datadata.forEach(datafunction);
-        function datafunction(item, index){
-            console.log(index, item)
-        }
+        datadata.forEach(function (routerbit) {
+            console.log(routerbit[0])
+        });
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
