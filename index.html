@@ -142,6 +142,7 @@
         crossorigin="anonymous"></script>
     <!-- magic starts here -->
     <script>
+        var datadata;
         $('#category').hide();
         $('#serie').hide();
         $('#varian').hide();
@@ -201,7 +202,7 @@
             var request = gapi.client.sheets.spreadsheets.values.get(params);
             request.then(function (response) {
                 // TODO: Change code below to process the `response` object:
-                var datadata=(response.result.values);
+                datadata = (response.result);
             }, function (reason) {
                 console.error('error: ' + reason.result.error.message);
             });
