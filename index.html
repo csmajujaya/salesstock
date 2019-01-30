@@ -173,6 +173,13 @@
             $('#itemUNIKEN-101-041').slideDown();
         })
 
+        $(document).ready(function () {
+            $('.btn-back-item').click(function () {
+                $('#varian').slideDown();
+                $('.itemitem').slideUp();
+            })
+        });
+
         function makeApiCall() {
             var params = {
                 // The ID of the spreadsheet to retrieve data from.
@@ -235,10 +242,6 @@
 
                 });
                 $('.itemitem').hide();
-                $('.btn-back-item').click(function () {
-                    $('#varian').slideDown();
-                    $('.itemitem').slideUp();
-                })
             }, function (reason) {
                 console.error('error: ' + reason.result.error.message);
             });
