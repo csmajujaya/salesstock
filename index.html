@@ -105,7 +105,7 @@
         </div>
     </div>
     <!-- Item -->
-    <div class="jumbotron center-block jumbofull" id="item">
+    <div class="jumbotron center-block jumbofull" id="allitem">
         
         </div>
     </div>
@@ -120,7 +120,7 @@
         $('#category').hide();
         $('#serie').hide();
         $('#varian').hide();
-        $('#item').hide();
+        // $('#item').hide();
         $('#uniken').click(function () {
             $('#partner').slideUp();
             $('#category').slideDown();
@@ -179,14 +179,18 @@
                 datadata = (response.result.values);
                 // script olah data
                 datadata.forEach(function (routerbit) {
-                    $("#varian").append(
-                        `
-                        <div class="container btnfull">
-                            <button type="button" class="btn btn-primary btn-lg" id="${routerbit[0]}">${routerbit[1]}</button>
-                        </div>
-                        `
-                    )
-                    $("#item").append(
+
+                    // foreach varian
+                    // $("#varian").append(
+                    //     `
+                    //     <div class="container btnfull">
+                    //         <button type="button" class="btn btn-primary btn-lg" id="${routerbit[0]}">${routerbit[1]}</button>
+                    //     </div>
+                    //     `
+                    // )
+
+                    // foreach item
+                    $("#allitem").append(
                         `
                         <div class="container row center-block" id"item${routerbit[0]}">
                             <div class="col-xs-4 col-sm-5 col-md-5">
@@ -201,9 +205,9 @@
                             <h4>${routerbit[1]}</h4>
                             <p><a class="btn btn-success btn-sm">Ada Stok (150+)</a><a class="btn btn-info btn-sm">Price List :
                                 ${routerbit[3]}</a></p>
-                            <p><a class="btn btn-warning btn-sm">1 Pc : +5% <br>${routerbit[3]}</a><a class="btn btn-warning btn-sm">20 Pcs
-                            : Nett <br>${routerbit[3]}</a><a class="btn btn-warning btn-sm">100 Pcs : 5% <br>${routerbit[3]}</a><a class="btn btn-warning btn-sm">500
-                            Pcs : 10% <br>${routerbit[3]}</a></p>
+                            <p><a class="btn btn-warning btn-sm">1 Pc : +5% <br>${routerbit[7]}</a><a class="btn btn-warning btn-sm">20 Pcs
+                            : Nett <br>${routerbit[10]}</a><a class="btn btn-warning btn-sm">100 Pcs : 5% <br>${routerbit[13]}</a><a class="btn btn-warning btn-sm">500
+                            Pcs : 10% <br>${routerbit[16]}</a></p>
                         </div>
                         `
                     )
