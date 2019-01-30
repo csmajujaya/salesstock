@@ -180,8 +180,11 @@
                 $('#varian').slideUp();
                 $('#itemUNIKEN-101-041').slideDown();
             })
+            $('.btn-back-item').click(function () {
+                $('#varian').slideDown();
+                $('.itemitem').slideUp();
+            })
         });
-
         function makeApiCall() {
             var params = {
                 // The ID of the spreadsheet to retrieve data from.
@@ -293,10 +296,6 @@
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
-            $('.btn-back-item').click(function () {
-                $('#varian').slideDown();
-                $('.itemitem').slideUp();
-            })
         </script>
 </body>
 
