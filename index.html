@@ -172,7 +172,7 @@
             $('#varian').slideUp();
             $('#itemUNIKEN-101-041').slideDown();
         })
-        
+
         function makeApiCall() {
             var params = {
                 // The ID of the spreadsheet to retrieve data from.
@@ -235,6 +235,10 @@
 
                 });
                 $('.itemitem').hide();
+                $('.btn-back-item').click(function () {
+                    $('#varian').slideDown();
+                    $('.itemitem').slideUp();
+                })
             }, function (reason) {
                 console.error('error: ' + reason.result.error.message);
             });
@@ -281,10 +285,6 @@
         function handleSignOutClick(event) {
             gapi.auth2.getAuthInstance().signOut();
         }
-        $('.btn-back-item').click(function () {
-            $('#varian').slideDown();
-            $('.itemitem').slideUp();
-        })
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
