@@ -1,0 +1,161 @@
+<script>
+        datacat = {
+            "uniken": {
+                "routerBit": [
+                    {
+                        "isi": [
+                            "UNIKEN-101-011",
+                            "UNIKEN-101-021",
+                            "UNIKEN-101-031",
+                            "UNIKEN-101-041"
+                        ], "name": "serie101"
+                    },
+                    {
+                        "serie103": [
+                            "UNIKEN-103-013",
+                            "UNIKEN-103-023",
+                            "UNIKEN-103-033",
+                            "UNIKEN-103-043",
+                            "UNIKEN-103-053"
+                        ], "name": "serie103"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-104-4105",
+                            "UNIKEN-104-411",
+                            "UNIKEN-104-421",
+                            "UNIKEN-104-431",
+                            "UNIKEN-104-433",
+                            "UNIKEN-104-441",
+                            "UNIKEN-104-451",
+                            "UNIKEN-104-453",
+                            "UNIKEN-104-455",
+                            "UNIKEN-104-457",
+                            "UNIKEN-104-459",
+                            "UNIKEN-104-473",
+                            "UNIKEN-104-474",
+                            "UNIKEN-104-487"
+                        ], "name": "serie104"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-151-006",
+                            "UNIKEN-151-008",
+                            "UNIKEN-151-010",
+                            "UNIKEN-151-021"
+                        ], "name": "serie151"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-201-010",
+                            "UNIKEN-201-011",
+                            "UNIKEN-201-021",
+                            "UNIKEN-201-031",
+                            "UNIKEN-201-041"
+                        ], "name": "serie201"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-202-011",
+                            "UNIKEN-202-021"
+                        ], "name": "serie202"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-204-011",
+                            "UNIKEN-204-021",
+                            "UNIKEN-204-031",
+                            "UNIKEN-204-041",
+                            "UNIKEN-204-051"
+                        ], "name": "serie204"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-207-070",
+                            "UNIKEN-207-080"
+                        ], "name": "serie207"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-208-011"
+                        ], "name": "serie208"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-209-011"
+                        ], "name": "serie209"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-210-011"
+                        ], "name": "serie210"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-301-010",
+                            "UNIKEN-301-011",
+                            "UNIKEN-301-021",
+                            "UNIKEN-301-031",
+                            "UNIKEN-301-041",
+                            "UNIKEN-301-051",
+                            "UNIKEN-301-061"
+                        ], "name": "serie301"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-302-011",
+                            "UNIKEN-302-021",
+                            "UNIKEN-302-031",
+                            "UNIKEN-302-041",
+                            "UNIKEN-302-051",
+                            "UNIKEN-302-061"
+                        ], "name": "serie302"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-305-011",
+                            "UNIKEN-305-021",
+                            "UNIKEN-305-031"
+                        ], "name": "serie305"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-306-011",
+                            "UNIKEN-306-021",
+                            "UNIKEN-306-031",
+                            "UNIKEN-306-431"
+                        ], "name": "serie306"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-307-013",
+                            "UNIKEN-307-014",
+                            "UNIKEN-307-015",
+                            "UNIKEN-307-016",
+                            "UNIKEN-307-041"
+                        ], "name": "serie307"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-313-011",
+                            "UNIKEN-313-021"
+                        ], "name": "serie313"
+                    },
+                    {
+                        "isi": [
+                            "UNIKEN-702-961"
+                        ], "name": "serie702"
+                    }
+                ]
+            }
+        }
+        datacat.uniken.routerBit.forEach(function (seri) {
+            $('#serie').append(
+                `
+            <div class="container btnfull">
+                <button type="button" class="btn btn-primary btn-lg" id="${seri.name}">${seri.name}</button>
+            </div>
+            `
+            )
+        });
+    </script>
