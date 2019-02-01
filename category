@@ -1,4 +1,22 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Category Test</title>
+</head>
+
+<body>
+    <div id="serie">
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script>
+
         datacat = {
             "uniken": {
                 "routerBit": [
@@ -11,7 +29,7 @@
                         ], "name": "serie101"
                     },
                     {
-                        "serie103": [
+                        "isi": [
                             "UNIKEN-103-013",
                             "UNIKEN-103-023",
                             "UNIKEN-103-033",
@@ -148,14 +166,36 @@
                     }
                 ]
             }
-        }
+        };
+        var itt = 0;
         datacat.uniken.routerBit.forEach(function (seri) {
             $('#serie').append(
                 `
-            <div class="container btnfull">
-                <button type="button" class="btn btn-primary btn-lg" id="${seri.name}">${seri.name}</button>
+            <div class="container btnfull ser">
+                <button type="button" class="btn btn-primary btn-lg" id="but${seri.name}">${seri.name}</button>
+            </div>
+            <div id="div${seri.name}">
+
             </div>
             `
             )
+            datacat.uniken.routerBit[itt].isi.forEach(function (vari) {
+                $(`#div${seri.name}`).append(
+                    `
+                    <div class="container btnfull varia">
+                        <button type="button" class="btn btn-primary btn-lg" id="but${vari}">${vari}</button>
+                    </div>
+                     `
+                )
+            });
+            itt++;
         });
+            // $('.varia').hide();
+            $('#butserie101').click(function () {
+                $('#butserie101').slideUp();
+                $('#divserie101').slideDown();
+            });
     </script>
+</body>
+
+</html>
