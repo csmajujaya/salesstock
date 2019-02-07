@@ -16,19 +16,15 @@
         .jumbofull {
             width: 100vw;
         }
-
         .btnfull {
             width: 100%;
         }
-
         .btn {
             margin: 2px;
         }
-
         .btn-warning {
             width: 105px
         }
-
         /* * {
             border-style: solid;
             border-color: blue;
@@ -89,18 +85,18 @@
             </button>
         </div>
         <div class="container btnfull">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-101">Straight 101</button>
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-101">Straight Bits 1/4" 101</button>
         </div>
         <div class="container btnfull ser">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-103">Straight 103</button>
-        </div>
-
-        <div class="container btnfull ser">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-104">Straight 104</button>
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-103">Straight Bits 1/4" 103</button>
         </div>
 
         <div class="container btnfull ser">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-151">Trimming 151</button>
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-104">Straight Bits 1/2" 104</button>
+        </div>
+
+        <div class="container btnfull ser">
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-151">Trimming / L.F.T. 151</button>
         </div>
 
         <div class="container btnfull ser">
@@ -117,23 +113,23 @@
         </div>
 
         <div class="container btnfull ser">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-207">Dovetail 207</button>
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-207">Dovetail Bits 207</button>
         </div>
 
         <div class="container btnfull ser">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-208">Bulat 208</button>
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-208">Bulat / Round 208</button>
         </div>
 
         <div class="container btnfull ser">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-209">Beading 209</button>
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-209">Beading Bits 209</button>
         </div>
 
         <div class="container btnfull ser">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-210">Ogee 210</button>
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-210">Ogee Bits 210</button>
         </div>
 
         <div class="container btnfull ser">
-            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-301">seri 301</button>
+            <button type="button" class="btn btn-primary btn-lg" id="butUNIKEN-RB-301">Round Over 301</button>
         </div>
 
         <div class="container btnfull ser">
@@ -686,7 +682,6 @@
     <!-- magic starts here -->
     <script>
         var datadata;
-
         function makeApiCall() {
             var params = {
                 spreadsheetId: '1pgQ4olgCfsYgV_daWkt80AoaE2c8vM4stWk7q-uzW-c',
@@ -715,11 +710,11 @@
                                                     <img src="${routerbit[2]}" class="img-responsive">
                                                 </div>
                                                 <div class="col-xs-8 col-sm-7 col-md-7">
-                                                <p><a class="btn btn-success btn-sm">${routerbit[4]}</a><a class="btn btn-info btn-sm">Price List :
+                                                <p><a class="btn btn-${routerbit[5]} btn-sm">${routerbit[4]}</a><a class="btn btn-info btn-sm">Price List :
                                                     ${routerbit[3]}</a></p>
-                                                <p><a class="btn btn-warning btn-sm">1 Pc : +5% <br>${routerbit[7]}</a><a class="btn btn-warning btn-sm">20 Pcs
-                                                : Nett <br>${routerbit[10]}</a><a class="btn btn-warning btn-sm">100 Pcs : 5% <br>${routerbit[13]}</a><a class="btn btn-warning btn-sm">500
-                                                Pcs : 10% <br>${routerbit[16]}</a></p>
+                                                <p><a class="btn btn-warning btn-sm">1 Pc : +5% <br>${routerbit[8]}</a><a class="btn btn-warning btn-sm">20 Pcs
+                                                : Nett <br>${routerbit[11]}</a><a class="btn btn-warning btn-sm">100 Pcs : 5% <br>${routerbit[14]}</a><a class="btn btn-warning btn-sm">500
+                                                Pcs : 10% <br>${routerbit[17]}</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -729,18 +724,15 @@
                         </div>
                         `
                     )
-
                 });
             }, function (reason) {
                 console.error('error: ' + reason.result.error.message);
             });
         }
-
         function initClient() {
             var API_KEY = 'AIzaSyBW7MM9fkmwS6s7G78NXNEr_vI8UY_AU7I';
             var CLIENT_ID = '1065744934801-4njhhdprv5taqlu9r91lji2umhdrpokj.apps.googleusercontent.com';
             var SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
-
             gapi.client.init({
                 'apiKey': API_KEY,
                 'clientId': CLIENT_ID,
@@ -751,21 +743,17 @@
                 updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
             });
         }
-
         function handleClientLoad() {
             gapi.load('client:auth2', initClient);
         }
-
         function updateSignInStatus(isSignedIn) {
             if (isSignedIn) {
                 makeApiCall();
             }
         }
-
         function handleSignInClick(event) {
             gapi.auth2.getAuthInstance().signIn();
         }
-
         function handleSignOutClick(event) {
             gapi.auth2.getAuthInstance().signOut();
         }
